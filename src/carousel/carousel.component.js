@@ -12,9 +12,10 @@ class RNCarousel extends React.PureComponent {
 
   componentDidMount() {
     const { loop } = this.props;
+    const { loopInterval } = this.props;
     setTimeout(() => {
       if (loop) {
-        intervalId = setInterval(() => this.scrollTo('right'), 4000);
+        intervalId = setInterval(() => this.scrollTo('right'), loopInterval);
       }
     }, 10);
   }
