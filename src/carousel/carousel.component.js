@@ -90,7 +90,7 @@ class RNCarousel extends React.PureComponent {
                 }
                 return (
                   <TouchableOpacity activeOpacity={0.7} onPress={() => onImagePressCb(item, index)}>
-                    <Image key={`index-images-${index}`} style={{ resizeMode: imageResizeMode, height: height, width: width }} source={item?.url.match(/http|https/g) ? { uri: item.url } : require(item.url)} />
+                    <Image key={index} style={{ resizeMode: imageResizeMode, height: height, width: width }} source={item?.url.match(/http|https/g) ? { uri: item.url } : require(item.url)} />
                   </TouchableOpacity>
                 )
               })}
@@ -108,7 +108,7 @@ class RNCarousel extends React.PureComponent {
             data.map((item, index) => {
               return (
                 <View
-                  key={`index-bullets-${index}`}
+                  key={index}
                   style={{
                     ...styles.indicatorContent,
                     borderColor: indicatorBorderColor,
