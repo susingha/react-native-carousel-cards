@@ -139,7 +139,7 @@ RNCarousel.propTypes = {
   indicatorStyle: PropTypes.object,
   contentContainerStyle: PropTypes.object,
   indicatorContainerStyle: PropTypes.object,
-  carouselContent: PropTypes.componentOrElement,
+  carouselContent: PropTypes.element,
   onImagePressCb: PropTypes.func
 };
 
